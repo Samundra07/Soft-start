@@ -1,0 +1,18 @@
+# Ignore compiled binaries
+*.o
+*.out
+*.exe
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
