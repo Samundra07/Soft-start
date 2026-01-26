@@ -15,6 +15,10 @@ struct Node {
 // Function to create a new node
 struct Node* createNode(int data) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    if (newNode == NULL) {
+        printf("Error: Memory allocation failed!\n");
+        exit(1);
+    }
     newNode->data = data;
     newNode->next = NULL;
     return newNode;
@@ -23,6 +27,7 @@ struct Node* createNode(int data) {
 // Function to insert at the beginning
 void insertAtBeginning(struct Node** head, int data) {
     struct Node* newNode = createNode(data);
+    if (newNode == NULL) return;
     newNode->next = *head;
     *head = newNode;
 }
@@ -30,6 +35,7 @@ void insertAtBeginning(struct Node** head, int data) {
 // Function to insert at the end
 void insertAtEnd(struct Node** head, int data) {
     struct Node* newNode = createNode(data);
+    if (newNode == NULL) return;
     
     if (*head == NULL) {
         *head = newNode;
