@@ -1,4 +1,3 @@
-Hello world
-I m in software engineering.
+Software engineering.
 ---
 I m  new to this.
